@@ -8,10 +8,6 @@ app.use(express.urlencoded({extended: false}))
 
 app.use("/api/products", productRoute);
 
-app.get('/', (req, res) => {
-    res.send('Hello World')
-})
-
 mongoose
     .connect('mongodb+srv://example:s6cUX597LfYnRNvu@backenddb.h2ticen.mongodb.net/?retryWrites=true&w=majority')
     .then(() => {
