@@ -6,6 +6,10 @@ app.get('/', (req, res) => {
     res.send('Hello World')
 })
 
+app.post('/api/products', (req, res) => {
+    res.send(req.body)
+})
+
 mongoose
     .connect('mongodb+srv://example:s6cUX597LfYnRNvu@backenddb.h2ticen.mongodb.net/?retryWrites=true&w=majority')
     .then(() => {
